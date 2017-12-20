@@ -1,12 +1,12 @@
 *Needs Review*
 
-Glossary
+术语表
 ===========================
 
-Terminology is important, so that all Hyperledger Fabric users and developers
-agree on what we mean by each specific term. What is chaincode, for example.
-The documentation will reference the glossary as needed, but feel free to
-read the entire thing in one sitting if you like; it's pretty enlightening!
+专业术语很重要，所以Fabric用户和开发人员
+同意我们所说的每个特定术语的含义。举个例子：如什么是链码。
+因此我们将引导你到术语说明，让你随时可以消除对术语理解的疑虑，
+当然，如果你愿意的话可以自由的阅读整个文档，非常有启发！
 
 .. _Anchor-Peer:
 
