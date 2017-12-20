@@ -1,4 +1,4 @@
-*Needs Review*
+*需要 Review*
 
 术语表
 ===========================
@@ -14,7 +14,7 @@
 -----------
 
 锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。
-通道中的每个成员_ 都有一个（或多个，以防单点故障）锚节点，
+通道中的每个 成员_ 都有一个（或多个，以防单点故障）锚节点，
 允许属于不同成员身份的节点来
 发现通道中存在的其它节点。
 
@@ -38,17 +38,17 @@
 并且将区块追加到
 对等节点文件系统的哈希链中。
 
-.. _chaincode:
+.. _链码:
 
-Chaincode
+链码
 ---------
 
-Chaincode is software, running on a ledger, to encode assets and the transaction
-instructions (business logic) for modifying the assets.
+链码是一个运行在账本上的软件，它可以对资产进行编码，其中的交易
+指令（或者叫业务逻辑）也可以用来修改资产。
 
-.. _Channel:
+.. _通道:
 
-Channel
+通道
 -------
 
 A channel is a private blockchain overlay which allows for data
