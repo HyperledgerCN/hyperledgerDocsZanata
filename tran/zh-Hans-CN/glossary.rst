@@ -3,40 +3,40 @@
 术语表
 ===========================
 
-专业术语很重要，所以Fabric用户和开发人员
-同意我们所说的每个特定术语的含义。举个例子：如什么是链码。
-因此我们将引导你到术语说明，让你随时可以消除对术语理解的疑虑，
-当然，如果你愿意的话可以自由的阅读整个文档，非常有启发！
+专业术语很重要，所有Fabric用户和开发人员
+需就每个特定术语的含义达成一致。例如，什么是链码。
+该文档将根据需要引用术语表，当然，
+如果你愿意的话，可以随时阅读整个文档；这很有启发性！
 
-.. _Anchor-Peer:
+.. _锚节点:
 
-Anchor Peer
+锚节点
 -----------
 
-A peer node on a channel that all other peers can discover and communicate with.
-Each Member_ on a channel has an anchor peer (or multiple anchor peers to prevent
-single point of failure), allowing for peers belonging to different Members to
-discover all existing peers on a channel.
+锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。
+通道中的每个成员_ 都有一个（或多个，以防单点故障）锚节点，
+允许属于不同成员身份的节点来
+发现通道中存在的其它节点。
 
 
-.. _Block:
+.. _区块:
 
-Block
+区块
 -----
 
-An ordered set of transactions that is cryptographically linked to the
-preceding block(s) on a channel.
+区块是通道上一组有序交易的集合。区块往往通过密码学手段
+连接到前导区块。
 
-.. _Chain:
+.. _链:
 
-Chain
+链
 -----
 
-The ledger's chain is a transaction log structured as hash-linked blocks of
-transactions. Peers receive blocks of transactions from the ordering service, mark
-the block's transactions as valid or invalid based on endorsement policies and
-concurrency violations, and append the block to the hash chain on the peer's
-file system.
+账本的链是一个交易区块经过“哈希连接”结构化的交易日志。
+对等节点从排序服务收到交易区块，
+基于背书策略和并发冲突来标注区块的交易为有效或者无效状态，
+并且将区块追加到
+对等节点文件系统的哈希链中。
 
 .. _chaincode:
 
