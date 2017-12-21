@@ -18,11 +18,11 @@ Docker and Docker Compose
 You will need the following installed on the platform on which you will be
 operating, or developing on (or for), Hyperledger Fabric:
 
-  - MacOSX, *nix, or Windows 10: `Docker <https://www.docker.com/products/overview>`__
-    Docker version 17.03.0-ce or greater is required.
+  - MacOSX, \*nix, or Windows 10: `Docker <https://www.docker.com/products/overview>`__
+    Docker version 17.06.2-ce or greater is required.
   - Older versions of Windows: `Docker
     Toolbox <https://docs.docker.com/toolbox/toolbox_install_windows/>`__ -
-    again, Docker version Docker 17.03.0-ce or greater is required.
+    again, Docker version Docker 17.06.2-ce or greater is required.
 
 You can check the version of Docker you have installed with the following
 command from a terminal prompt:
@@ -33,7 +33,7 @@ command from a terminal prompt:
 
 .. note:: Installing Docker for Mac or Windows, or Docker Toolbox will also
           install Docker Compose. If you already had Docker installed, you
-          should check that you have Docker Compose version 1.8 or greater
+          should check that you have Docker Compose version 1.14.0 or greater
           installed. If not, we recommend that you install a more recent
           version of Docker.
 
@@ -49,12 +49,12 @@ following command from a terminal prompt:
 Go Programming Language
 -----------------------
 
-Hyperledger Fabric uses the Go programming language 1.7.x for many of its
+Hyperledger Fabric uses the Go programming language 1.9.x for many of its
 components.
 
-.. note: Go version 1.8.x will yield test failures
+.. note: building with Go version 1.8.x is not supported
 
-  - `Go <https://golang.org/>`__ - version 1.7.x
+  - `Go <https://golang.org/>`__ - version 1.9.x
 
 Given that we are writing a Go chaincode program, we need to be sure that the
 source code is located somewhere within the ``$GOPATH`` tree. First, you will
@@ -95,19 +95,44 @@ installed.
 
   npm install npm@3.10.10 -g
 
+Python
+^^^^^^
+
+.. note:: The following applies to Ubuntu 16.04 users only.
+
+By default Ubuntu 16.04 comes with Python 3.5.1 installed as the ``python3`` binary.
+The Fabric Node.js SDK requires an iteration of Python 2.7 in order for ``npm install``
+operations to complete successfully.  Retrieve the 2.7 version with the following command:
+
+.. code:: bash
+
+  sudo apt-get install python
+
+Check your version(s):
+
+.. code:: bash
+
+  python --version
+
 Windows extras
 --------------
 
-If you are developing on Windows, you will want to work within the
-Docker Quickstart Terminal which provides a better alternative to the
-built-in Windows such as `Git Bash <https://git-scm.com/downloads>`__
-which you typically get as part of installing Docker Toolbox on
-Windows 7.
+If you are developing on Windows 7, you will want to work within the
+Docker Quickstart Terminal which uses `Git Bash
+<https://git-scm.com/downloads>`__ and provides a better alternative
+to the built-in Windows shell.
 
 However experience has shown this to be a poor development environment
 with limited functionality. It is suitable to run Docker based
 scenarios, such as :doc:`getting_started`, but you may have
-difficulties with operations involving the ``make`` command.
+difficulties with operations involving the ``make`` and ``docker``
+commands.
+
+On Windows 10 you should use the native Docker distribution and you
+may use the Windows PowerShell. However, for the :ref:`binaries`
+command to succeed you will still need to have the ``uname`` command
+available. You can get it as part of Git but beware that only the
+64bit version is supported.
 
 Before running any ``git clone`` commands, run the following commands:
 
