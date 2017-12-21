@@ -25,7 +25,7 @@ execute the following commands:
 
 .. code:: bash
 
-  git clone https://github.com/hyperledger/fabric-samples.git
+  git clone -b master https://github.com/hyperledger/fabric-samples.git
   cd fabric-samples
 
 .. _binaries:
@@ -44,14 +44,23 @@ you will extract the platform-specific binaries:
 
 .. code:: bash
 
-  curl -sSL https://goo.gl/byy2Qj | bash -s 1.0.5
+  curl -sSL https://goo.gl/6wtTN5 | bash -s 1.1.0-preview
 
 .. note:: If you get an error running the above curl command, you may
-          have too old a version of curl. Please visit the
-          :doc:`prereqs` page for additional information on where to
-          find the latest version.
+          have too old a version of curl that does not handle
+          redirects or an unsupported environment.
 
-The curl command above downloads and executes a bash script
+	  Please visit the :doc:`prereqs` page for additional
+	  information on where to find the latest version of curl and
+	  get the right environment. Alternately, you can substitute
+	  the un-shortened URL:
+	  https://github.com/hyperledger/fabric/blob/master/scripts/bootstrap.sh
+
+.. note:: You can use the command above for any published version of Hyperledger
+          Fabric. Simply replace '1.1.0-preview' with the version identifier
+					of the version you wish to install.
+
+The command above downloads and executes a bash script
 that will download and extract all of the platform-specific binaries you
 will need to set up your network and place them into the cloned repo you
 created above. It retrieves four platform-specific binaries:
@@ -79,7 +88,7 @@ The script lists out the Docker images installed upon conclusion.
 
 Look at the names for each image; these are the components that will ultimately
 comprise our Hyperledger Fabric network.  You will also notice that you have
-two instances of the same image ID - one tagged as "x86_64-1.0.X" and
+two instances of the same image ID - one tagged as "x86_64-1.x.x" and
 one tagged as "latest".
 
 .. note:: On different architectures, the x86_64 would be replaced
