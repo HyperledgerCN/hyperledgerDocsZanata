@@ -1,6 +1,6 @@
 *Needs Review*
 
-Glossary
+Glossary  yls
 ===========================
 
 Terminology is important, so that all Hyperledger Fabric users and developers
