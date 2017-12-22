@@ -5,31 +5,31 @@
 
 专业术语很重要，所有Fabric用户和开发人员
 需就每个特定术语的含义达成一致。例如，什么是链码。
-该文档将根据需要引用术语表，当然，
+该文档其他内容将根据需要引用术语表，当然，
 如果你愿意的话，可以随时阅读整个文档；这很有启发性！
 
-.. _锚节点:
+.. _Anchor-Peer:
 
-锚节点
+Anchor Peer  锚节点
 -----------
 
-锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。
+锚节点是通道中能被所有其他peer节点探测、并能与之进行通信的一种peer节点。
 通道中的每个 成员_ 都有一个（或多个，以防单点故障）锚节点，
-允许属于不同成员身份的节点来
+允许属于不同成员身份的节点
 发现通道中存在的其它节点。
 
 
-.. _区块:
+.. _Block:
 
-区块
+Block 区块
 -----
 
 区块是通道上一组有序交易的集合。区块往往通过密码学手段
 连接到前导区块。
 
-.. _链:
+.. _Chain:
 
-链
+Chain 链
 -----
 
 账本的链是一个交易区块经过“哈希连接”结构化的交易日志。
@@ -303,7 +303,7 @@ proposal is either an instantiate or an invoke (read/write) request.
 
 .. _Query:
 
-Query
+Query 查询
 -----
 
 A query is a chaincode invocation which reads the ledger current state but does
@@ -330,39 +330,39 @@ comes in multiple flavors: Node.js, Java. and Python.
 
 .. _State-DB:
 
-State Database
+State Database 状态数据库
 --------------
 
-Current state data is stored in a state database for efficient reads and queries
-from chaincode. Supported databases include levelDB and couchDB.
+为了从链码中方便地读写，Current state存储于状态数据库中。
+目前支持levelDB和couchDB。
 
 .. _System-Chain:
 
-System Chain
+System Chain 系统链
 ------------
 
-Contains a configuration block defining the network at a system level. The
-system chain lives within the ordering service, and similar to a channel, has
-an initial configuration containing information such as: MSP information, policies,
-and configuration details.  Any change to the overall network (e.g. a new org
-joining or a new ordering node being added) will result in a new configuration block
-being added to the system chain.
+系统链是包含了在系统层面定义了网络的配置区块的链。
+系统链存在于排序服务中，与通道类似，
+有初始配置信息，如MSP信息、策略
+和配置详情。整个网络的任何变化（如
+新组织加入或新排序节点加入）都会导致新的配置区块
+添加到系统链。
 
-The system chain can be thought of as the common binding for a channel or group
-of channels.  For instance, a collection of financial institutions may form a
-consortium (represented through the system chain), and then proceed to create
-channels relative to their aligned and varying business agendas.
+系统链可以看作是一个或一组通道的通用绑定。
+例如，一批金融机构可能组成一个
+联盟（由系统链表示），然后根据
+各自不同的业务场景创建不同的通道。
 
 .. _Transaction:
 
-Transaction
+Transaction 交易
 -----------
 
-Invoke or instantiate results that are submitted for ordering, validation, and commit.
-Invokes are requests to read/write data from the ledger. Instantiate is a request to
-start and initialize a chaincode on a channel. Application clients gather invoke or
-instantiate responses from endorsing peers and package the results and endorsements
-into a transaction that is submitted for ordering, validation, and commit.
+交易就是将Invoke或Instantiate结果提交至ordering、validation和commit。
+Invoke是从账本中请求读/写数据。Instantiate是
+在一个通道中启动和初始化链码的请求。应用程序客户端收集来自背书节点的invoke或Instantiate响应，
+并将结果和背书打包
+提交至ordering、validation和commit。
 
 .. Licensed under Creative Commons Attribution 4.0 International License
    https://creativecommons.org/licenses/by/4.0/
