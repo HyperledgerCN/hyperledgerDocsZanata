@@ -38,65 +38,65 @@ Chain 链
 并且将区块追加到
 对等节点文件系统的哈希链中。
 
-.. _链码:
+.. _chaincode:
 
-链码
+Chaincode 链码
 ---------
 
 链码是一个运行在账本上的软件，它可以对资产进行编码，其中的交易
 指令（或者叫业务逻辑）也可以用来修改资产。
 
-.. _通道:
+.. _Channel:
 
-通道
+Channel 通道
 -------
 
-A channel is a private blockchain overlay which allows for data
-isolation and confidentiality. A channel-specific ledger is shared across the
-peers in the channel, and transacting parties must be properly authenticated to
-a channel in order to interact with it.  Channels are defined by a
-Configuration-Block_.
+通道是私有区块链，它保证了
+数据隔离和保密。特定通道的账本由该通道中所有peer节点共享，
+并且交易参与方必须经过该通道的正确授权
+才能与其交互。通道是由 配置区块_ 
+定义的。
 
 .. _Commitment:
 
-Commitment
+Commitment 提交
 ----------
 
-Each Peer_ on a channel validates ordered blocks of
-transactions and then commits (writes/appends) the blocks to its replica of the
-channel Ledger_. Peers also mark each transaction in each block
-as valid or invalid.
+通道中的每个 peer节点_ 都会验证交易的有序区块，
+然后将区块提交（写或追加）至该通道 账本_ 的各个副本。
+peer节点也会标记每个区块中的每笔交易的状态
+是有效或者无效。
 
 .. _Concurrency-Control-Version-Check:
 
-Concurrency Control Version Check
+Concurrency Control Version Check  CCVC
 ---------------------------------
 
-Concurrency Control Version Check is a method of keeping state in sync across
-peers on a channel. Peers execute transactions in parallel, and before commitment
-to the ledger, peers check that the data read at execution time has not changed.
-If the data read for the transaction has changed between execution time and
-commitment time, then a Concurrency Control Version Check violation has
-occurred, and the transaction is marked as invalid on the ledger and values
-are not updated in the state database.
+CCVC是保持通道中各peer节点间状态同步的一种方法。
+peer节点并行的执行交易，在交易提交至账本之前，
+peer节点会检查已读数据在执行期间是否被修改。
+如果读取的数据在执行和提交之间被改变，
+就会引发CCVC冲突，
+该交易就会在账本中被标记为无效，
+而且值不会更新到状态数据库。
 
 .. _Configuration-Block:
 
-Configuration Block
+Configuration Block 配置区块
 -------------------
 
-Contains the configuration data defining members and policies for a system
-chain (ordering service) or channel. Any configuration modifications to a
-channel or overall network (e.g. a member leaving or joining) will result
-in a new configuration block being appended to the appropriate chain. This
-block will contain the contents of the genesis block, plus the delta.
+配置区块包含为系统链（排序服务）或通道定义成员和策略的配置数据。
+通道或整个网络的任意配置修改
+（比如，成员离开或加入），
+都将一个新的配置区块追加到对应的链上。
+这个配置区块会包含创世区块的内容和修改后的增量。
 
 .. Consensus
 
-Consensus
+Consensus  共识
 ---------
 
-A broader term overarching the entire transactional flow, which serves to generate
+共识是贯穿整个交易流程中的广泛意义上的概念，它会
 an agreement on the order and to confirm the correctness of the set of transactions
 constituting a block.
 
