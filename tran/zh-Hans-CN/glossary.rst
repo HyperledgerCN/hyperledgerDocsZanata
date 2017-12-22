@@ -96,25 +96,25 @@ Configuration Block 配置区块
 Consensus  共识
 ---------
 
-共识是贯穿整个交易流程中的广泛意义上的概念，它会
-an agreement on the order and to confirm the correctness of the set of transactions
-constituting a block.
+共识是贯穿整个交易流程中的广泛意义上的概念，
+它会生成对排序的同意
+并确认构成区块的一组交易的正确性。
 
 .. _Current-State:
 
-Current State
+Current State 当前状态
 -------------
 
-The current state of the ledger represents the latest values for all keys ever
-included in its chain transaction log. Peers commit the latest values to ledger
-current state for each valid transaction included in a processed block. Since
-current state represents all latest key values known to the channel, it is
-sometimes referred to as World State. Chaincode executes transaction proposals
-against current state data.
+账本的当前状态代表其链上交易日志中所有Key对应的最新值。
+peer节点会将
+处理过的区块中的每个有效交易对应修改的最新值提交为账本的当前状态。
+由于当前状态表示通道中所有最新的K-V，
+所以又被称为 World State。链码执行交易提案就是
+针对的当前状态数据。
 
 .. _Dynamic-Membership:
 
-Dynamic Membership
+Dynamic Membership 动态成员
 ------------------
 
 Hyperledger Fabric supports the addition/removal of members, peers, and ordering service
