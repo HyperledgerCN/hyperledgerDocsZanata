@@ -1,38 +1,36 @@
 Hyperledger Fabric 是分布式分类帐的独特实现。
 
-技术（DLT）确保数据的完整性和一致性而
-而
-
-提供责任、透明度和效率无与伦比的
+技术（DLT），确保数据的完整性和一致性
+而提供责任、透明度和效率无与伦比的
 其他的blockchain或DLT技术。
 
 Hyperledger Fabric 执行特定类型
 :doc:`permissioned <glossary#permissioned-network>` :doc:`blockchain
 network <glossary#blockchain-network>` on which members can track,
 利用数字化资产交换与互动
-:doc:`transactions <glossary#transactions>` 
+:doc:`transactions <glossary#transactions>` 使用智能管理
 contracts - what we call :doc:`chaincode <glossary#chaincode>` - in a
 secure and robust manner while enabling
-:doc:`participants <glossary#participants>` in the network to interact
-in a manner that ensures that their transactions and data can be
-restricted to an identified subset of network participants - something
-we call a :doc:`channel <glossary#channel>`.
+:doc:`participants <glossary#participants>` 在网络中进行交互，
+在网络互动的方式，可确保他们的交易和数据，
+仅限于网络参与者的标识子集，
+我们的联系方式a:doc:`channel <glossary#channel>`.
 
-The blockchain network supports the ability for members to establish
-shared ledgers that contain the source of truth about those digitized
-assets, and recorded transactions, that is replicated in a secure manner
-only to the set of nodes participating in that channel.
+blockchain网络支持成员建立的能力，
+共享台账包含真理的来源的数字化，
+以安全的方式复制资产和记录的交易，
+只对参与该channel的节点集。
 
-The Hyperledger Fabric architecture is comprised of the following
-components: peer nodes, ordering nodes and the clients applications that
-are likely leveraging one of the language-specific Hyperledger Fabric SDKs.
-These components have identities derived from certificate authorities.
-Hyperledger Fabric also offers a certificate authority service,
-*fabric-ca* but, you may substitute that with your own.
+Hyperledger Fabric 体系结构由以下组成
+组件：对等节点、订购节点和客户端应用程序，
+你可以使用 Hyperledger Fabric SDK（例如： java-sdk、nodejs-sdk、python-sdk），
+这些组件具有来自证书颁发机构的标识。
+Hyperledger Fabric 还提供证书颁发机构服务
+*fabric-ca* 但是，你可以用你自己的。
 
-All peer nodes maintain the ledger/state by committing transactions. In
-that role, the peer is called a :doc:`committer <glossary#commitment>`.
-Some peers are also responsible for simulating transactions by executing
+组件：对等节点、订购节点和客户端应用程序，
+使用角色对等节点 a :doc:`committer <glossary#commitment>`.
+peer节点并行的执行交易，在交易提交至账本之前，
 chaincodes (smart contracts) and endorsing the result. In that role the
 peer is called an :doc:`endorser <glossary#endorsement>`. A peer may be an
 endorser for certain types of transactions and just a ledger maintainer
