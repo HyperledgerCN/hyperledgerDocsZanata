@@ -30,9 +30,9 @@ Hyperledger Fabric 还提供证书颁发机构服务
 
 组件：对等节点、订购节点和客户端应用程序，
 使用角色对等节点 a :doc:`committer <glossary#commitment>`.
-peer节点并行的执行交易，在交易提交至账本之前，
-chaincodes (smart contracts) and endorsing the result. In that role the
-peer is called an :doc:`endorser <glossary#endorsement>`. A peer may be an
+一些人员对等节点也负责通过执行来模拟事务。
+chaincodes（智能合同）审批结果。在这个角色中
+区块链节点
 endorser for certain types of transactions and just a ledger maintainer
 (committer) for others.
 
