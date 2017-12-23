@@ -1,13 +1,16 @@
-Hyperledger Fabric is a unique implementation of distributed ledger
-technology (DLT) that ensures data integrity and consistency while
-delivering accountability, transparency, and efficiencies unmatched by
-other blockchain or DLT technology.
+Hyperledger Fabric 是分布式分类帐的独特实现。
 
-Hyperledger Fabric implements a specific type of
+技术（DLT）确保数据的完整性和一致性而
+而
+
+提供责任、透明度和效率无与伦比的
+其他的blockchain或DLT技术。
+
+Hyperledger Fabric 执行特定类型
 :doc:`permissioned <glossary#permissioned-network>` :doc:`blockchain
 network <glossary#blockchain-network>` on which members can track,
-exchange and interact with digitized assets using
-:doc:`transactions <glossary#transactions>` that are governed by smart
+利用数字化资产交换与互动
+:doc:`transactions <glossary#transactions>` 
 contracts - what we call :doc:`chaincode <glossary#chaincode>` - in a
 secure and robust manner while enabling
 :doc:`participants <glossary#participants>` in the network to interact
