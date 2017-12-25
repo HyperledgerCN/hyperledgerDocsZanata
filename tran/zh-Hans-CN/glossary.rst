@@ -283,7 +283,7 @@ Peer 节点
 ----
 
 peer节点是个网络实体，它维护账本并运行链码容器来
-read/write operations to the ledger.  Peers are owned and maintained by members.
+对账本执行读写操作。peer属于成员，并由其维护。
 
 .. _Policy:
 
@@ -312,21 +312,21 @@ Query 查询
 客户端通常不会提交只读交易给排序、验证和记账。
 个别情况下，客户端也可以选择将只读交易
 提交给排序、验证和记账。例如，
-client wants auditable proof on the ledger chain that it had knowledge of specific ledger
-state at a certain point in time.
+如果客户希望将其在某个时间点知道该账本的特定状态
+作留证审计。
 
 .. _SDK:
 
 Software Development Kit (SDK)
 ------------------------------
 
-The Hyperledger Fabric client SDK provides a structured environment of libraries
-for developers to write and test chaincode applications. The SDK is fully
-configurable and extensible through a standard interface. Components, including
-cryptographic algorithms for signatures, logging frameworks and state stores,
-are easily swapped in and out of the SDK. The SDK provides APIs for transaction
-processing, membership services, node traversal and event handling. The SDK
-comes in multiple flavors: Node.js, Java. and Python.
+SDK为开发人员提供了一个结构化的库环境，
+用于编写和测试链码应用程序。
+SDK完全可以通过标准接口实现配置和扩展。
+像签名的加密算法、日志框架和state存储
+这样的组件都可以轻松地实现替换。SDK为交易处理，
+成员服务、节点遍历以及事件处理提供API。
+目前SDK支持Node.js、Java和Python。
 
 .. _State-DB:
 
