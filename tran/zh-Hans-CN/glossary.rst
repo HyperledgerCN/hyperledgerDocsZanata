@@ -245,11 +245,11 @@ Member 成员
 Membership Service Provider MSP
 ---------------------------
 
-The Membership Service Provider (MSP) refers to an abstract component of the
-system that provides credentials to clients, and peers for them to participate
-in a Hyperledger Fabric network. Clients use these credentials to authenticate
-their transactions, and peers use these credentials to authenticate transaction
-processing results (endorsements). While strongly connected to the transaction
+MSP是指一个抽象系统组件，
+它为客户端和它们的peer节点提供证书，
+以参与到Fabric网络中。客户端使用它们的证书授权交易，
+并且peer节点用它们的证书授权
+交易处理结果（背书）。
 processing components of the systems, this interface aims to have membership
 services components defined, in such a way that alternate implementations of
 this can be smoothly plugged in without modifying the core of transaction
