@@ -215,34 +215,34 @@ Invoke 调用
 
 .. _Leading-Peer:
 
-Leading Peer
+Leading Peer 主导节点
 ------------
 
-Each Member_ can own multiple peers on each channel that
-it subscribes to. One of these peers is serves as the leading peer for the channel,
-in order to communicate with the network ordering service on behalf of the
-member. The ordering service "delivers" blocks to the leading peer(s) on a
-channel, who then distribute them to other peers within the same member cluster.
+每个 成员_ 在其订阅的通道上可拥有多个peer节点。
+其中一个peer节点会作为通道的主导节点，
+代表成员与排序服务通信。
+排序服务将区块“交付”给这个主导节点，
+然后这个主导节点将这些区块分发给同一成员集群中的其他peer节点。
 
 .. _Ledger:
 
-Ledger
+Ledger 账本
 ------
 
-A ledger is a channel's chain and current state data which is maintained by each
-peer on the channel.
+账本是通道中每个peer节点维护的通道的链
+和当前状态数据。
 
 .. _Member:
 
-Member
+Member 成员
 ------
 
-A legally separate entity that owns a unique root certificate for the network.
-Network components such as peer nodes and application clients will be linked to a member.
+成员是拥有网络唯一根证书的合法独立实体。
+像peer节点和客户端这样的网络组件都会会关联一个成员。
 
 .. _MSP:
 
-Membership Service Provider
+Membership Service Provider MSP
 ---------------------------
 
 The Membership Service Provider (MSP) refers to an abstract component of the
