@@ -139,58 +139,58 @@ Endorsement 背书
 Endorsement policy 背书策略
 ------------------
 
-Defines the peer nodes on a channel that must execute transactions attached to a
-specific chaincode application, and the required combination of responses (endorsements).
-A policy could require that a transaction be endorsed by a minimum number of
-endorsing peers, a minimum percentage of endorsing peers, or by all endorsing
-peers that are assigned to a specific chaincode application. Policies can be
-curated based on the application and the desired level of resilience against
-misbehavior (deliberate or not) by the endorsing peers. A transaction that is submitted
-must satisfy the endorsement policy before being marked as valid by committing peers.
-A distinct endorsement policy for install and instantiate transactions is also required.
+背书策略定义了通道中必须执行特定链码的peer节点，
+和所需的响应（背书）组合。
+背书策略可以设定对一个交易的最小背书节点个数，
+或最小背书节点数百分比，或
+该链码的所有背书节点。
+背书策略由背书节点基于应用程序和对抵御不良行为
+的期望水平来组织管理。一个被提交的交易
+必须符合背书策略才可以被记账节点标记为有效。
+安装和实例化链码时需要指定背书策略。
 
 .. _Fabric-ca:
 
 Hyperledger Fabric CA
 ---------------------
 
-Hyperledger Fabric CA is the default Certificate Authority component, which
-issues PKI-based certificates to network member organizations and their users.
-The CA issues one root certificate (rootCert) to each member and one enrollment
-certificate (ECert) to each authorized user.
+Fabric CA是默认的证书管理组件，
+它向网络成员及其用户颁发基于PKI的证书。
+CA为每个成员颁发一个根证书（rootCert），
+为每个授权用户颁发一个注册证书（eCert）。
 
 .. _Genesis-Block:
 
-Genesis Block
+Genesis Block 创世区块
 -------------
 
-The configuration block that initializes a blockchain network or channel, and
-also serves as the first block on a chain.
+创世区块是初始化区块链网络或通道的配置区块，
+也是链上的第一个区块。
 
 .. _Gossip-Protocol:
 
-Gossip Protocol
+Gossip Protocol Gossip协议
 ---------------
 
-The gossip data dissemination protocol performs three functions:
-1) manages peer discovery and channel membership;
-2) disseminates ledger data across all peers on the channel;
-3) syncs ledger state across all peers on the channel.
-Refer to the :doc:`Gossip <gossip>` topic for more details.
+Gossip数据传播协议有三个功能：
+1) 管理peer节点发现和通道成员；
+2）通道上的所有peer节点间广播账本数据；
+3）通道上的所有peer节点间同步账本数据。
+详情参考 :doc:`Gossip <gossip>` 。
 
 .. _Initialize:
 
-Initialize
+Initialize 初始化
 ----------
 
-A method to initialize a chaincode application.
+一个初始化链码的方法。
 
-Install
+Install 安装
 -------
 
-The process of placing a chaincode on a peer's file system.
+将链码放到peer节点的文件系统的过程。
 
-Instantiate
+Instantiate 实例化
 -----------
 
 The process of starting and initializing a chaincode application on a specific channel.
