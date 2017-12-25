@@ -1,8 +1,7 @@
-Hyperledger Fabric 是分布式分类帐的独特实现。
-
-技术（DLT），确保数据的完整性和一致性
-而提供责任、透明度和效率无与伦比的
-其他的blockchain或DLT技术。
+Hyperledger Fabric 是分布式账本技术（DLT）的独特实现，
+可确保数据的完整性和一致性，
+同时提供其他区块链或DLT技术无法比拟的
+审计性、透明度和效率。
 
 Hyperledger Fabric 执行特定类型
 :doc:`permissioned <glossary#permissioned-network>` :doc:`blockchain
