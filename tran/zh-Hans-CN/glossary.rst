@@ -117,26 +117,26 @@ peer节点会将
 Dynamic Membership 动态成员
 ------------------
 
-Hyperledger Fabric supports the addition/removal of members, peers, and ordering service
-nodes, without compromising the operationality of the overall network. Dynamic
-membership is critical when business relationships adjust and entities need to
-be added/removed for various reasons.
+Fabric支持添加/删除成员、peee节点、排序服务节点，
+而不会影响整个网络的可操作性。
+动态成员至关重要，当业务关系调整并且
+由于各种原因需要添加/删除实体时。
 
 .. _Endorsement:
 
-Endorsement
+Endorsement 背书
 -----------
 
-Refers to the process where specific peer nodes execute a chaincode transaction and return
-a proposal response to the client application. The proposal response includes the
-chaincode execution response message, results (read set and write set), and events,
-as well as a signature to serve as proof of the peer's chaincode execution.
-Chaincode applications have corresponding endorsement policies, in which the endorsing
-peers are specified.
+背书是指一个peer节点执行链码交易并
+返回一个提案响应给客户端应用程序的过程。这个提案响应包括
+链码执行响应信息、结果（读写集）、事件、
+以及作为证明peer节点执行链码的签名。
+链码有相应的背书策略，背书策略中指定了
+背书节点。
 
 .. _Endorsement-policy:
 
-Endorsement policy
+Endorsement policy 背书策略
 ------------------
 
 Defines the peer nodes on a channel that must execute transactions attached to a
