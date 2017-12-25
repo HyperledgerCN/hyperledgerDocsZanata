@@ -193,25 +193,25 @@ Install 安装
 Instantiate 实例化
 -----------
 
-The process of starting and initializing a chaincode application on a specific channel.
-After instantiation, peers that have the chaincode installed can accept chaincode
-invocations.
+实例化时通道上启动并初始化一个链码的过程。
+实例化后，安装过链码的peer节点可接收链码
+调用。
 
 .. _Invoke:
 
-Invoke
+Invoke 调用
 ------
 
-Used to call chaincode functions. A client application invokes chaincode by
-sending a transaction proposal to a peer. The peer will execute the chaincode
-and return an endorsed proposal response to the client application. The client
-application will gather enough proposal responses to satisfy an endorsement policy,
-and will then submit the transaction results for ordering, validation, and commit.
-The client application may choose not to submit the transaction results. For example
-if the invoke only queried the ledger, the client application typically would not
-submit the read-only transaction, unless there is desire to log the read on the ledger
-for audit purpose. The invoke includes a channel identifier, the chaincode function to
-invoke, and an array of arguments.
+用户调用链码中函数。客户端应用程序通过
+给peer节点发送一个交易提案来调用链码。peer节点会执行链码
+并给客户端返回一个背书后的提案响应。
+客户端将收集足够多的提案响应以满足背书策略，
+然后将交易结果提交给排序、验证、提交等服务。
+客户端也可以选择不提交交易结果。例如，
+如果这调用只是查询账本，客户端通常
+不会提交只读交易，除非希望记录账本的查询
+用于审计目的。调用包括通道的标识、要调用的链码中的函数
+和一组参数。
 
 .. _Leading-Peer:
 
