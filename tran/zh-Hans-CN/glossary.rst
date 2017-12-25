@@ -249,69 +249,69 @@ MSP是指一个抽象系统组件，
 它为客户端和它们的peer节点提供证书，
 以参与到Fabric网络中。客户端使用它们的证书授权交易，
 并且peer节点用它们的证书授权
-交易处理结果（背书）。
-processing components of the systems, this interface aims to have membership
-services components defined, in such a way that alternate implementations of
-this can be smoothly plugged in without modifying the core of transaction
-processing components of the system.
+交易处理结果（背书）。在与区块链系统的
+交易处理组件紧密连接的同时，这个接口的目标是定义成员服务组件，
+以便在不修改系统中交易处理组件的核心的
+情况下顺利地插入
+其替代实现。
 
 .. _Membership-Services:
 
-Membership Services
+Membership Services 成员服务
 -------------------
 
-Membership Services authenticates, authorizes, and manages identities on a
-permissioned blockchain network. The membership services code that runs in peers
-and orderers both authenticates and authorizes blockchain operations.  It is a
-PKI-based implementation of the Membership Services Provider (MSP) abstraction.
+成员服务在许可的区块链网络上认证、授权和管理身份。
+在peer节点和orderer节点中运行的成员服务的代码
+既认证也授权区块链操作。
+它是基于PKI的会员服务提供商（MSP）抽象实现。
 
 .. _Ordering-Service:
 
-Ordering Service
+Ordering Service 排序服务
 ----------------
 
-A defined collective of nodes that orders transactions into a block.  The ordering
-service exists independent of the peer processes and orders transactions on a
-first-come-first-serve basis for all channel's on the network.  The ordering service is
-designed to support pluggable implementations beyond the out-of-the-box SOLO and Kafka varieties.
-The ordering service is a common binding for the overall network; it contains the cryptographic
-identity material tied to each Member_.
+排序服务是将交易排序到一个区块的节点的集合。
+排序服务独立于peer处理流程之外，
+并以先到先得的原则为网络中所有交易排序。
+排序服务支持可插拔实现，目前仅支持SOLO和Kafka。
+排序服务是整个网络的通用绑定；
+它包含与每个 成员_ 相关加密的身份资料。
 
 .. _Peer:
 
-Peer
+Peer 节点
 ----
 
-A network entity that maintains a ledger and runs chaincode containers in order to perform
+peer节点是个网络实体，它维护账本并运行链码容器来
 read/write operations to the ledger.  Peers are owned and maintained by members.
 
 .. _Policy:
 
-Policy
+Policy 策略
 ------
 
-There are policies for endorsement, validation, chaincode
-management and network/channel management.
+有背书策略，验证策略，
+链码管理策略，网络/通道管理策略。
 
 .. _Proposal:
 
-Proposal
+Proposal 提案
 --------
 
-A request for endorsement that is aimed at specific peers on a channel. Each
-proposal is either an instantiate or an invoke (read/write) request.
+提案是通道中对指定peer节点的背书请求。
+提案要么是链码实例化请求，要么是链码调用（读写）请求。
 
 .. _Query:
 
 Query 查询
 -----
 
-A query is a chaincode invocation which reads the ledger current state but does
-not write to the ledger. The chaincode function may query certain keys on the ledger,
-or may query for a set of keys on the ledger. Since queries do not change ledger state,
-the client application will typically not submit these read-only transactions for ordering,
-validation, and commit. Although not typical, the client application can choose to
-submit the read-only transaction for ordering, validation, and commit, for example if the
+查询时一个链码调用，它读取账本当前状态数据，
+但不写账本。链码函数可以查询账本中的某些key，
+或查询账本上的一组key。由于查询不改变账本状态，
+客户端通常不会提交只读交易给排序、验证和记账。
+个别情况下，客户端也可以选择将只读交易
+提交给排序、验证和记账。例如，
 client wants auditable proof on the ledger chain that it had knowledge of specific ledger
 state at a certain point in time.
 
