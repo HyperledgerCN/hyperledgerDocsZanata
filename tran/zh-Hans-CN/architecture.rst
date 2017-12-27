@@ -1,7 +1,7 @@
 Hyperledger Fabric 是分布式账本技术（DLT）的独特实现，
 可确保数据的完整性和一致性，
 同时提供其他区块链或DLT技术无法比拟的
-审计性、透明度和效率。
+审计性、透明度及效率。
 
 Hyperledger Fabric 执行特定类型
 :doc:`permissioned <glossary#permissioned-network>` :doc:`blockchain
