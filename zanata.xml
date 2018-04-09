@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <config xmlns="http://zanata.org/namespace/config/">
   <url>https://translate.zanata.org/</url>
-  <project>fabric_docs</project>
+  <project>hyperledger-fabric-docs</project>
   <project-version>master</project-version>
   <project-type>file</project-type>
 
